@@ -1,0 +1,50 @@
+/* 
+ *  Aggiunte a desgin italia (prob da mettere nel template di origine)
+ */
+
+// Pulsanti senza bordo arrotondato
+.btn-primary, .btn-danger, btn-warning, .btn-success {
+    border-radius: 0px !important;
+    color: #fff !important;
+}
+
+// Container flat su schermi grandi
+@media (min-width: $screen-xl-min){
+    .container{
+        width: 1460px;
+    }
+}
+
+// Margini durante l'edit dei contenuti
+.edit {
+    @extend .container;
+    
+    margin-top: 3rem;
+}
+
+.breadcrumb {
+    font-size: 1.4rem;
+}
+
+/* Share buttons */
+.share-btn {
+    margin-right: 0.6rem;
+    font-size: 2.6rem;
+}
+.fb-share-btn{
+    span{
+        color: #385893;
+    }
+}
+
+.lk-share-btn{
+    span{
+        color: #30373d;
+    }
+}
+
+.share-btn:hover{
+    span{
+        color: #cbd300;
+    }
+} 

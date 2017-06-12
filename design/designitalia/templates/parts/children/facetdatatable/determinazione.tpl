@@ -1,0 +1,1 @@
+{include uri='design:parts/children/facetdatatable/provvedimenti.tpl' classes='determinazione'}
