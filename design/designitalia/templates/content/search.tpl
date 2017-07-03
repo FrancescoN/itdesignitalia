@@ -108,6 +108,14 @@
                 {node_view_gui view='search_line' sequence=$bgColor use_url_translation=$use_url_translation content_node=$result}
             {/foreach}
             
+            {include name=Navigator
+                     uri='design:navigator/google.tpl'
+                     page_uri='/content/search'
+                     page_uri_suffix=concat('?SearchText=',$search_text|urlencode,$search_timestamp|gt(0)|choose('',concat('&SearchTimestamp=',$search_timestamp)), $uriSuffix )
+                     item_count=$search_count
+                     view_parameters=$view_parameters
+                     item_limit=$page_limit}
+            
         </div>
 
         <div class="Grid-cell u-background-grey-10 u-sm-size1of3 u-md-size1of3 u-lg-size1of3 u-padding-all-xxl u-layout-centerContent hidden-xs">

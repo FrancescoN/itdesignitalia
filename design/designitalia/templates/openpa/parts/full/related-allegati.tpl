@@ -16,9 +16,24 @@
         {if $rel}
             <li>
                 <a href="{concat( 'content/download/', $rel.data_map.file.contentobject_id, '/', $rel.data_map.file.id,'/version/', $rel.data_map.file.version , '/file/', $rel.data_map.file.content.original_filename|urlencode )|ezurl( 'no' )}" target="_blank">
-                    <i class="mdi mdi-download"></i>
-
+                    {def $icon = "mdi-file"
+                         $name_array = $rel.data_map.file.content.original_filename|explode('.')
+                         $name_size = count($name_array)
+                         $extension = $name_array[$name_size|sub(1)]}
+                    
+                    {if $extension|eq('pdf')}
+                        {set $icon = "mdi-file-pdf"}
+                    {elseif or($extension|eq('doc'), $extension|eq('docx'))}
+                        {set $icon = "mdi-file-word"}
+                    {elseif or($extension|eq('xls'), $extension|eq('xlsx'))}
+                        {set $icon = "mdi-file-excel"}
+                    {/if}
+                    
+                    <i class="mdi {$icon}"></i>
+                    
                     {$rel.name}
+                    
+                    {undef $icon}
                 </a>
             </li>
         {/if}

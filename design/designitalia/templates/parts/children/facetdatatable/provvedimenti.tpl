@@ -79,7 +79,7 @@
                             <span></span> <i class="mdi mdi-chevron-down mdi-24px u-color-60 pull-right"></i>
                         </div>
 
-                        <button class="Grid-cell u-sizeFit u-background-60 u-color-white u-padding-all-s u-textWeight-700 mdi mdi-calendar mdi-24px" 
+                        <button id="reportrange_btn" class="Grid-cell u-sizeFit u-background-60 u-color-white u-padding-all-s u-textWeight-700 mdi mdi-calendar mdi-24px" 
                                 title="Date range" aria-label="Date range">
                         </button>
                     </div>
@@ -176,6 +176,7 @@
                     </th>
                     <th>{'Number'|i18n('designitalia/full')}</th>
                     <th>{'Title'|i18n('designitalia/full')}</th>
+                    <th>{'Subtitle'|i18n('designitalia/full')}</th>
                     <th>{'Proponent'|i18n('designitalia/full')}</th>
                     {if $currentUser.login|ne("anonymous")}
                         <th style="color: red;">{'Published'|i18n('designitalia/full')}</th>

@@ -79,7 +79,7 @@
                             <span></span> <i class="mdi mdi-chevron-down mdi-24px u-color-60 pull-right"></i>
                         </div>
 
-                        <button class="Grid-cell u-sizeFit u-background-60 u-color-white u-padding-all-s u-textWeight-700 mdi mdi-calendar mdi-24px" 
+                        <button id="reportrange_btn" class="Grid-cell u-sizeFit u-background-60 u-color-white u-padding-all-s u-textWeight-700 mdi mdi-calendar mdi-24px" 
                                 title="Date range" aria-label="Date range">
                         </button>
                     </div>
@@ -89,7 +89,7 @@
   
                 <div class="u-facet-form-cell">
                     <div class="Form-field Form-field--withPlaceholder Grid">
-                        <input type="number" 
+                        <input {*type="number" *}
                                class="Form-input Grid-cell u-sizeFill u-text-r-s u-border-none" 
                                id="numero" 
                                name="numero" 
@@ -102,8 +102,8 @@
                         <select class="Form-input Grid-cell u-sizeFill u-text-r-s u-border-none" 
                                 id="beneficiari" 
                                 name="beneficiari"
-                                data-placeholder="{'Beneficiaries'|i18n('designitalia/full')}">
-                            <option value="" selected>{'Beneficiaries'|i18n('designitalia/full')}</option>
+                                data-placeholder="{'Users'|i18n('designitalia/full')}">
+                            <option value="" selected>{'Users'|i18n('designitalia/full')}</option>
                         </select>
 
                         <div class="Form-input Grid-cell u-sizeFill u-text-r-s u-border-none chosen-container chosen-container-single" 
@@ -172,7 +172,7 @@
                 <tr>
                     <th>
                     {if ne( $sectionidentifier, "provvedimenti_importati" )}
-                        {'Adoption date'|i18n('designitalia/full')}
+                        {'Protocol date'|i18n('designitalia/full')}
                     {else}
                         {'Import date'|i18n('designitalia/full')}
                     {/if}

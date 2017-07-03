@@ -10,22 +10,12 @@
     {if $node|has_attribute('struttura_competente')}
         <strong>{'Competent organizational structure'|i18n('designitalia/full')}</strong>
         <div class="Prose">
-            {def $curstruttura_competente = $node|attribute('struttura_competente').content}
-            {def $relationcontentobject_id=0}
-            {foreach $curstruttura_competente.relation_list as $relation}
-                {set $relationcontentobject_id= $relation.contentobject_id}
-                {def $objectSt=fetch( 'content', 'object', hash( 'object_id', $relationcontentobject_id ) )}
-                {if ne( $objectSt.section_identifier, "provvedimenti_importati" )}
-                    {attribute_view_gui attribute=$node|attribute('struttura_competente')}
-                {else}
-                    <strong>{$objectSt.name|wash}</strong>
-                {/if}
-            {/foreach}
+            {attribute_view_gui attribute=$node|attribute('struttura_competente')}
         </div>
     {/if}
 
     {if $node|has_attribute('numero')}
-        <strong>{'Measure number'|i18n('designitalia/full')}</strong>
+        <strong>{'Protocol number'|i18n('designitalia/full')}</strong>
         <div class="Prose">
             {attribute_view_gui attribute=$node|attribute('numero')}
         </div>

@@ -340,6 +340,11 @@
             }, cb);
 
             cb(start, end);
+            
+            $('#reportrange_btn').click(function( event ){
+                $('#reportrange').trigger("click");
+                event.preventDefault();
+            });
         });
         
     });

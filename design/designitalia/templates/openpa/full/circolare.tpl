@@ -16,7 +16,8 @@
         </div>
 
         {if $node|has_attribute( 'oggetto' )}
-            <div class="Prose">
+            <h3>{'Subject'|i18n('designitalia/full')}</h3>
+            <div class="Prose" style='margin-top: 0 !important;'>
                 {attribute_view_gui attribute=$node|attribute( 'oggetto' )}
             </div>
         {/if}
@@ -36,14 +37,14 @@
             </div>
         {/if}
         
-        {def $file = $node|attribute( 'documento' )}
+        {*def $file = $node|attribute( 'documento' )}
         <a class="Button Button--default u-text-r-xs" href={concat("content/download/",$file.contentobject_id,"/",$file.id,"/file/",$file.content.original_filename)|ezurl}>
             <span class="u-color-white">
                 <i class="mdi mdi-download mdi-36px"></i>
                 {'Download internal measure'|i18n('designitalia/full')}
             </span>
         </a>
-        {undef $file}
+        {undef $file*}
         
         {include uri='design:openpa/parts/full/tags.tpl'}
 
@@ -58,6 +59,8 @@
         {include uri='design:openpa/parts/full/related-informazioni.tpl'}
         
         {include uri='design:openpa/parts/full/related-persone.tpl'}
+        
+        {include uri='design:openpa/parts/full/related-documentoCircolare.tpl'}
          
         {include uri='design:openpa/parts/full/related-allegati.tpl'}
         

@@ -5,7 +5,7 @@
 {/if}
 
 
-<div class="u-flow-map">
+<div class="u-flow-map hidden-xs hidden-sm">
     <section>
         <div class="u-map-title">
             <h2>

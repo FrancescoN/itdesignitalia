@@ -71,10 +71,14 @@
           <source>users</source>
           <translation>utenti</translation>
         </message>
-		<message>
-		  <source>Scroll to top</source>
+        <message>
+          <source>Scroll to top</source>
           <translation>Torna all'inizio</translation>
-		</message>
+        </message>
+        <message>
+          <source>School employees</source>
+          <translation>Personale scuola</translation>
+        </message>
     </context>
     <context>
         <name>designitalia/searchpage</name>
@@ -112,6 +116,10 @@
         <message>
           <source>Navigation by user class</source>
           <translation>Navigazione per utenza</translation>
+        </message>
+        <message>
+          <source>Navigation by theme</source>
+          <translation>Navigazione per tematica</translation>
         </message>
     </context>
     <context>
@@ -510,6 +518,26 @@
           <source>Subtitle</source>
           <translation>Sottotitolo</translation>
         </message>
+	<message>
+          <source>Event type</source>
+          <translation>Tipologia</translation>
+        </message>
+	<message>
+          <source>Protocol number</source>
+          <translation>Numedo di protocollo</translation>
+        </message>
+	<message>
+          <source>Document</source>
+          <translation>Documento</translation>
+        </message>
+	<message>
+          <source>Subject</source>
+          <translation>Oggetto</translation>
+        </message>
+	<message>
+          <source>Main document</source>
+          <translation>Documento principale</translation>
+        </message>
     </context>
     <context>
         <name>designitalia/dashboard</name>
@@ -537,7 +565,7 @@
           <source>Page</source>
           <translation>Pagina</translation>
         </message>
-		<message>
+	<message>
           <source>of</source>
           <translation>di</translation>
         </message>

@@ -44,8 +44,8 @@
                         <select class="Form-input Grid-cell u-sizeFill u-text-r-s u-border-none" 
                                 id="figuraprofessionale" 
                                 name="figuraprofessionale"
-                                data-placeholder="{'professional'|i18n('vivoscuoladi/concorsi')}">
-                            <option value="" selected>{'professional'|i18n('vivoscuoladi/concorsi')}</option>
+                                data-placeholder="{'Job title'|i18n('vivoscuoladi/concorsi')}">
+                            <option value="" selected>{'Job title'|i18n('vivoscuoladi/concorsi')}</option>
                         </select>
 
                         <div class="Form-input Grid-cell u-sizeFill u-text-r-s u-border-none chosen-container chosen-container-single" 
@@ -88,11 +88,11 @@
         <table class="Table Table--striped Table--responsive" id="prv_datatable_content" width="100%">
             <thead>
                 <tr>
-                    <th>{'professional'|i18n('vivoscuoladi/concorsi')}</th>
-                    <th>{'object'|i18n('vivoscuoladi/concorsi')}</th>
-                    <th>{'start requests date'|i18n('vivoscuoladi/concorsi')}</th>
-                    <th>{'end requests date'|i18n('vivoscuoladi/concorsi')}</th>
-                    <th>{'contes statust'|i18n('vivoscuoladi/concorsi')}</th>                
+                    <th>{'Job title'|i18n('vivoscuoladi/concorsi')}</th>
+                    <th>{'Object'|i18n('vivoscuoladi/concorsi')}</th>
+                    <th>{'Subscription start date'|i18n('vivoscuoladi/concorsi')}</th>
+                    <th>{'Subscription end date'|i18n('vivoscuoladi/concorsi')}</th>
+                    <th>{'Contest status'|i18n('vivoscuoladi/concorsi')}</th>                
                 </tr>
             </thead>
         </table>
