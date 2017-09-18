@@ -108,14 +108,6 @@
                 {node_view_gui view='search_line' sequence=$bgColor use_url_translation=$use_url_translation content_node=$result}
             {/foreach}
             
-            {include name=Navigator
-                     uri='design:navigator/google.tpl'
-                     page_uri='/content/search'
-                     page_uri_suffix=concat('?SearchText=',$search_text|urlencode,$search_timestamp|gt(0)|choose('',concat('&SearchTimestamp=',$search_timestamp)), $uriSuffix )
-                     item_count=$search_count
-                     view_parameters=$view_parameters
-                     item_limit=$page_limit}
-            
         </div>
 
         <div class="Grid-cell u-background-grey-10 u-sm-size1of3 u-md-size1of3 u-lg-size1of3 u-padding-all-xxl u-layout-centerContent hidden-xs">
@@ -216,7 +208,7 @@
                                             $facetName|rawurlencode,
                                             $uriSuffix )|ezurl}>
                                             
-                                            <span class="u-padding-all-xxs u-color-white u-background-30">
+                                            <span class="u-padding-all-xxs u-color-white u-background-20">
                                                 {$facetName|shorten(20)|wash}
                                             </span>
                                         </a>
@@ -242,29 +234,29 @@
                         <ul class="list-unstyled u-margin-top-l u-text-xxs">
                           <li class="Grid u-padding-all-xs">
                               <a href={concat( $baseURI, '&dateFilter=1', $uriSuffix )|ezurl}>
-                                  <span class="u-padding-all-xxs u-color-white u-background-30">
+                                  <span class="u-padding-all-xxs u-color-white u-background-20">
                                       {"Last day"|i18n("design/standard/content/search")}
                                   </span>
                               </a>
                           </li>
                           <li class="Grid u-padding-all-xs">
                               <a href={concat( $baseURI, '&dateFilter=2', $uriSuffix )|ezurl}>
-                                  <span class="u-padding-all-xxs u-color-white u-background-30">{"Last week"|i18n("design/standard/content/search")}</span>
+                                  <span class="u-padding-all-xxs u-color-white u-background-20">{"Last week"|i18n("design/standard/content/search")}</span>
                               </a>
                           </li>
                           <li class="Grid u-padding-all-xs">
                               <a href={concat( $baseURI, '&dateFilter=3', $uriSuffix )|ezurl}>
-                                  <span class="u-padding-all-xxs u-color-white u-background-30">{"Last month"|i18n("design/standard/content/search")}</span>
+                                  <span class="u-padding-all-xxs u-color-white u-background-20">{"Last month"|i18n("design/standard/content/search")}</span>
                               </a>
                           </li>
                           <li class="Grid u-padding-all-xs">
                               <a href={concat( $baseURI, '&dateFilter=4', $uriSuffix )|ezurl}>
-                                  <span class="u-padding-all-xxs u-color-white u-background-30">{"Last three months"|i18n("design/standard/content/search")}</span>
+                                  <span class="u-padding-all-xxs u-color-white u-background-20">{"Last three months"|i18n("design/standard/content/search")}</span>
                               </a>
                           </li>
                           <li class="Grid u-padding-all-xs">
                               <a href={concat( $baseURI, '&dateFilter=5', $uriSuffix )|ezurl}>
-                                  <span class="u-padding-all-xxs u-color-white u-background-30">{"Last year"|i18n("design/standard/content/search")}</span>
+                                  <span class="u-padding-all-xxs u-color-white u-background-20">{"Last year"|i18n("design/standard/content/search")}</span>
                               </a>
                           </li>
                         </ul>

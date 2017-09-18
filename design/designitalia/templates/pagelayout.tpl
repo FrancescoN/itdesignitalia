@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js ie89 ie8" lang="{$site.http_equiv.Content-language|wash}"><![endif]-->
-<!--[if IE 9]><html class="no-js ie89 ie9" lang="{$site.http_equiv.Content-language|wash}"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
-<html class="js" lang="{$site.http_equiv.Content-language|wash}">
+<!--[if IE 8]><html class="no-js ie89 ie8" lang="it"><![endif]-->
+<!--[if IE 9]><html class="no-js ie89 ie9" lang="it"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="{$site.http_equiv.Content-language|wash}">
 <!--<![endif]-->
 
 {http_header('X-UA-Compatible: IE=Edge')}
@@ -31,22 +31,10 @@
     <!-- Site: {ezsys( 'hostname' )} -->
 
     {include uri='design:page_head.tpl'}
-    {include uri='design:page_head_social_meta.tpl'}
     {include uri='design:page_head_style.tpl'}
     {include uri='design:page_head_script.tpl'}
-    {include uri='design:page_favicon.tpl'}
 </head>
-<body class="t-Pac" style="padding-top: 50px;">
-    
-    
-<!--[if (lt IE 9) | IE 9]>
-<div class="Prose Alert Alert--error Alert--withIcon u-layout-prose u-padding-r-bottom u-padding-r-right u-margin-r-bottom" role="alert">
-    <h2 class="u-text-h3">Attenzione! Questo sito non viene visualizzato correttamente.</h2>
-    <p class="u-text-p">
-        Stai utilizzando una versione non supportata di Internet Explorer, è consigliato un aggiornamento del browser.
-    </p>
-</div>
-<![endif]-->
+<body class="t-Pac" style="padding-top: 256px;">
 
 {*<div id="page">*}
 
@@ -59,18 +47,12 @@
     {if and( $pagedata.website_toolbar, $pagedata.is_edit|not)}
         {include uri='design:page_toolbar.tpl'}
     {/if}
-    
-    <div class="u-content-length">
-        <div class="u-content-timetoread">
-        </div>
-    </div>
 
+    {*if and( $pagedata.node_id|ne( ezini( 'NodeSettings', 'RootNode', 'content.ini' ) ), $pagedata.show_path, array( 'edit', 'browse' )|contains( $ui_context )|not() )}
+      {include uri='design:breadcrumb.tpl'}
+    {/if*}
 
-    {if and( $pagedata.node_id|ne( ezini( 'NodeSettings', 'RootNode', 'content.ini' ) ), $pagedata.show_path, array( 'edit', 'browse' )|contains( $ui_context )|not() )}
-        {include uri='design:breadcrumb.tpl'}
-    {/if}
-
-    <div class="u-margin-bottom-xl">
+    <div class="MainContent">
         
 {/cache-block}
 
@@ -81,11 +63,6 @@
     </div>
 
     {include uri='design:page_footer.tpl'}
-    
-    <a href="#" title="{'Scroll to top'|i18n('designitalia')}" class="ScrollTop js-scrollTop js-scrollTo">
-        <i class="ScrollTop-icon Icon-collapse" aria-hidden="true"></i>
-        <span class="u-hiddenVisually">{'Scroll to top'|i18n('designitalia')}</span>
-    </a>
 
 {*</div>*}
 

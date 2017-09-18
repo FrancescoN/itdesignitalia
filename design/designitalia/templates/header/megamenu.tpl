@@ -1,22 +1,18 @@
-{def $current_node = false()}
-
-{if is_set($current_node_id)}
-    {set $current_node = fetch( 'content', 'node', hash( 'node_id', $current_node_id ) )}
-{/if}
+{def $current_node = fetch( 'content', 'node', hash( 'node_id', $current_node_id ) )}
 
 {* Attiva/Disattiva Menù *}
 {def $top_menu=true()}
 
-{if and($current_node, $current_node.object.state_identifier_array|contains('top_menu/inactive'))}
+{if $current_node.object.state_identifier_array|contains('top_menu/inactive')}
     {set $top_menu=false()}
 {/if}
       
 {if $top_menu}
 
     {def $root_node = fetch( 'content', 'node', hash( 'node_id', $pagedata.root_node ) )}
-    <div class="u-textCenter u-hidden u-sm-hidden u-md-block u-lg-block">
+    <div class="Headroom-hideme u-textCenter u-hidden u-sm-hidden u-md-block u-lg-block">
 
-        <nav class="Megamenu Megamenu--default js-megamenu">
+        <nav class="Megamenu Megamenu--default">
             {def $top_menu_class_filter = appini( 'MenuContentSettings', 'MegaMenuIdentifierList', array() )
                  $top_menu_items = fetch( 'content', 'list', hash( 'parent_node_id', $root_node.node_id,
                                           'sort_by', $root_node.sort_array,

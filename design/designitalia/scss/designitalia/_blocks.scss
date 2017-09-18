@@ -1,0 +1,24 @@
+/*
+ * Fogli di stile relativi a blocchi homepage
+ */
+
+.ColoreChiaro{
+    background-color: $block-links-background-color;
+}
+
+.Panels{
+    .Panel { 
+        min-height: 150px;
+    }
+    
+    .Item{
+        .title{
+            a{
+                color: #fff;
+            }
+        }
+        .subtitle{
+            margin-top: 20px;
+        }
+    }
+}

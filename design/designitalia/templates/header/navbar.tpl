@@ -9,7 +9,7 @@
            aria-label="{'menu access'|i18n('designitalia')}" 
            title="{'menu access'|i18n('designitalia')}">
             <span class="Hamburger-toggle" role="presentation"></span>
-            <span class="Header-toggleText u-color-text" role="presentation">Menu</span>
+            <span class="Header-toggleText" role="presentation">Menu</span>
         </a>
     </div>
 
@@ -54,10 +54,10 @@
         <div class="Header-search" id="header-search">
             <form class="Form" action="/content/search">
                 <div class="Form-field Form-field--withPlaceholder Grid" role="search">
-                    <input class="Form-input Grid-cell u-sizeFill u-text-r-s u-background-grey-20 u-border-none" 
+                    <input class="Form-input Grid-cell u-sizeFill u-text-r-s" 
                            required id="cerca" 
                            name="SearchText" 
-                           {if is_set($search_text)}value="{$search_text|wash}{/if}">
+                           value="{$search_text|wash}">
                     <label class="Form-label" for="cerca">{'Search'|i18n('designitalia')}...</label>
                     <button class="Grid-cell u-sizeFit u-background-60 u-color-white u-padding-all-s u-textWeight-700 mdi mdi-magnify mdi-18px" 
                             title="{'Start searching'|i18n('designitalia')}" a

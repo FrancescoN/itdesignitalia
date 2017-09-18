@@ -1,7 +1,7 @@
 {* Load JavaScript dependencys + JavaScriptList *}
 {ezscript_load( array(
-    'vendor/modernizr.js',
     'ezjsc::jquery',
+    'vendor/modernizr.js',
     ezini( 'JavaScriptSettings', 'JavaScriptList', 'design.ini' ),
     ezini( 'JavaScriptSettings', 'FrontendJavaScriptList', 'design.ini' )
 ))}

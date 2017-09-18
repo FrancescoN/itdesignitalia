@@ -5,14 +5,12 @@
         <a href="http://www.provincia.tn.it"><span>Provincia Autonoma di Trento</span></a>
 
         <div class="Header-languages">
-            <span>
-                <img class="LogoTrentino" src={'images/trentino.png'|ezdesign()}>
-            </span>
+            <img class="LogoTrentino" src={'images/trentino.png'|ezdesign()}>
             
             {if ezini('DesignItaliaHeader', 'HasNewsletter', 'itdesignitalia.ini')|eq('TRUE')}
                 <a class="Header-language u-hidden u-md-inlineBlock u-lg-inlineBlock u-background-60" href={"/notification/settings"|ezurl}>
                     <abbr title="Newsletter">
-                        <i class="mdi mdi-email mdi-24px"></i>
+                        <i class="mdi mdi-email"></i>
                     </abbr>
                 </a>
             {/if}
@@ -21,7 +19,7 @@
                 {if fetch( 'user', 'has_access_to', hash( 'module', 'content', 'function', 'dashboard' ) )}   
                     <a class="Header-language u-hidden u-md-inlineBlock u-lg-inlineBlock" href={"/content/dashboard/"|ezurl} >
                         <abbr title="{'Dashboard'|i18n('designitalia')}">
-                            <i class="mdi mdi-view-dashboard mdi-24px"></i>
+                            <i class="mdi mdi-view-dashboard"></i>
                         </abbr>
                     </a>
                 {/if}
@@ -29,20 +27,20 @@
                 {if fetch( 'user', 'has_access_to', hash( 'module', 'user', 'function', 'selfedit' ) )}
                     <a class="Header-language u-hidden u-md-inlineBlock u-lg-inlineBlock" href={"/user/edit/"|ezurl} >
                         <abbr title="{'Profile'|i18n('designitalia')}">
-                            <i class="mdi mdi-account mdi-24px"></i>
+                            <i class="mdi mdi-account"></i>
                         </abbr>
                     </a>
                 {/if}
 
                 <a class="Header-language u-hidden u-md-inlineBlock u-lg-inlineBlock" href={"/user/logout"|ezurl}>
                     <abbr title="Logout">
-                        <i class="mdi mdi-lock-open mdi-24px"></i>
+                        <i class="mdi mdi-lock-open"></i>
                     </abbr>
                 </a>
             {else}
                 <a class="Header-language u-hidden u-md-inlineBlock u-lg-inlineBlock" href={"/user/login"|ezurl}>
                     <abbr title="Login">
-                        <i class="mdi mdi-lock mdi-24px"></i>
+                        <i class="mdi mdi-lock"></i>
                     </abbr>
                 </a>
             {/if}

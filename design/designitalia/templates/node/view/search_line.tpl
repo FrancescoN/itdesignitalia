@@ -1,5 +1,5 @@
 <div class="Grid SearchItem">
-    <div class="Grid-Cell u-padding-top-m u-padding-right-m u-padding-bottom-m content-view-search_line">
+    <div class="Grid-Cell u-padding-all-m content-view-search_line">
         <h4>
             <a class="text-contrast" href="{$node.url_alias|ezurl('no')}" title="{$node.name|wash()}">{$node.name|wash()}</a>
         </h4>
